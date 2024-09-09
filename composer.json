@@ -18,6 +18,7 @@
     ],
     "require": {
         "phpmailer/phpmailer": "^6.9",
-        "vlucas/phpdotenv": "^5.6"
+        "vlucas/phpdotenv": "^5.6",
+        "resend/resend-php": "^0.13.0"
     }
 }
