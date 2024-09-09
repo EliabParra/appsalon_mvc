@@ -23,6 +23,8 @@
     }
 ?>
 
+<h2>hola</h2>
+
 <div id="citas-admin">
     <ul class="citas">
     <?php 
