@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+.swal2-title {
+    font-size: 3rem !important;
+}
+
+.swal2-html-container {
+    font-size: 1.8rem !important;
+}
+
+.swal2-confirm {
+    background-color: v.$azul;
+    padding: 1rem 2rem !important;
+    font-size: 1.4rem;
+}
