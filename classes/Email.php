@@ -70,14 +70,18 @@ class Email {
         // //enviar el email
         // $mail->send();
 
-        $resend = Resend::client('re_UvZaPQPF_6TWKwvZkE6Q7MTJQfEguAcn5');
+        $resend = Resend::client('re_123456789');
 
-        $resend->emails->send([
-            'from' => 'Acme <onboarding@resend.dev>',
-            'to' => ["{$this->email}"],
-            'subject' => "Hola {$this->nombre}",
-            'html' => '<p>it works!</p>'
-        ]);
+        try {
+            $result = $resend->emails->send([
+                'from' => 'Acme <onboarding@resend.dev>',
+                'to' => [$this->email],
+                'subject' => "Hola {$this->nombre}",
+                'html' => '<strong>It works!</strong>',
+            ]);
+        } catch (\Exception $e) {
+            exit('Error: ' . $e->getMessage());
+        }
     }
 
     public function enviarInstrucciones() {
